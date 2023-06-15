@@ -1,0 +1,52 @@
+{
+  "name": "objection-graphql",
+  "version": "0.4.5",
+  "description": "Automatically generates GraphQL schema for objection.js models and allows to extend the schema with custom mutations and subscriptions",
+  "main": "objection-graphql.js",
+  "scripts": {
+    "test": "istanbul --config=.istanbul.yml cover node_modules/mocha/bin/_mocha -- --slow 10 --timeout 5000 --reporter spec tests",
+    "test-only": "mocha --slow 10 --timeout 5000 --reporter spec --recursive tests",
+    "test-bail": "mocha --slow 10 --timeout 5000 --reporter spec --recursive tests --bail",
+    "test-opt": "mocha --slow 10 --timeout 5000 --reporter spec --recursive tests --bail --trace_opt --trace_deopt --trace_inlining",
+    "lint:js": "eslint . --fix"
+  },
+  "keywords": [
+    "GraphQL",
+    "SQL",
+    "objection.js"
+  ],
+  "author": "Sami Koskimäki <sami.koskimaki@vincit.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vincit/objection-graphql.git"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib/*",
+    "objection-graphql.js"
+  ],
+  "peerDependencies": {
+    "graphql": "> 0.9.0",
+    "objection": "> 0.8.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "expect.js": "^0.3.1",
+    "graphql": "^0.13.2",
+    "istanbul": "^0.4.5",
+    "knex": "^0.14.6",
+    "mocha": "^3.4.2",
+    "objection": "^1.1.7",
+    "sqlite3": "^4.0.4"
+  }
+}
